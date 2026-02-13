@@ -1,5 +1,10 @@
 # DirectAdmin IPv6 Checker 🔍
 
+Readme: [English](README.md)
+
+![License](https://img.shields.io/github/license/sr00t3d/directadmin-checkipv6)
+![Shell Script](https://img.shields.io/badge/Shell-script-green)
+
 Este script automatiza a verificação de registros **AAAA (IPv6)** para todos os domínios hospedados em um servidor DirectAdmin. Ele gera um relatório formatado indicando quais domínios já estão operando com a nova versão do protocolo IP.
 
 ## 📋 Funcionalidades
