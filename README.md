@@ -55,3 +55,18 @@ another-site.net                         | -                                    
 
 [!IMPORTANT]  
 The script requires read permission in the DirectAdmin directories (/usr/local/directadmin/data/users/), therefore running it as the root user is recommended.
+
+## ⚠️ Legal Notice
+
+> [!WARNING]
+> This software is provided "as is". Always make sure to test first in a development environment. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
+
+## 📚 Detailed Tutorial
+
+For a complete, step-by-step guide, check out my full article:
+
+👉 [**Check Domains Ipv6 on DirectAdmin**](https://perciocastelo.com.br/blog/check-domains-ipv6-on-directAdmin.html)
+
+## License 📄
+
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for more details.
