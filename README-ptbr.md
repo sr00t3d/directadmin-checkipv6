@@ -53,5 +53,20 @@ exemplo.com.br                           | 2001:db8:85a3::8a2e:370:7334         
 outro-site.net                           | -                                       | não
 ```
 
-[!IMPORTANT]
-O script precisa de permissão de leitura nos diretórios do DirectAdmin (/usr/local/directadmin/data/users/), por isso recomenda-se a execução como usuário root.
+[!IMPORTANTE]  
+O script requer permissão de leitura nos diretórios do DirectAdmin (/usr/local/directadmin/data/users/), portanto é recomendado executá-lo como usuário root.
+
+## ⚠️ Aviso Legal
+
+> [!AVISO]
+> Este software é fornecido “como está”. Sempre certifique-se de testar primeiro em um ambiente de desenvolvimento. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados por esta ferramenta.
+
+## 📚 Tutorial Detalhado
+
+Para um guia completo, passo a passo, confira meu artigo completo:
+
+👉 [**Verificar Domínios Ipv6 no DirectAdmin**](https://perciocastelo.com.br/blog/check-domains-ipv6-on-directAdmin.html)
+
+## Licença 📄
+
+Este projeto está licenciado sob a **GNU General Public License v3.0**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
