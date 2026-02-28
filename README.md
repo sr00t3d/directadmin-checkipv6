@@ -1,6 +1,6 @@
 # DirectAdmin IPv6 Checker 🔍
 
-Readme: [Português](README-ptbr.md)
+Readme: [BR](README-ptbr.md)
 
 ![License](https://img.shields.io/github/license/sr00t3d/directadmin-checkipv6)
 ![Shell Script](https://img.shields.io/badge/Shell-script-green)
@@ -16,43 +16,48 @@ This script automates the verification of **AAAA (IPv6)** records for all domain
 - Generates a clean tabular report in `/var/www/html/ipv6-domains.txt`.
 - Quickly identifies which domains have or do not have IPv6 pointing.
 
-🚀 How to use  
-1. Prerequisites  
-Make sure you have the `dnsutils` utility (which contains the `dig` command) installed on your server:
+🚀 How to use
 
-CentOS/CloudLinux: `yum install bind-utils`
-
-Debian/Ubuntu: `apt-get install dnsutils`
-
-2. Installation  
-Save the script on your server and give it execution permission:
+1. **Download the file to the server:**
 
 ```bash
-chmod +x check_ipv6.sh
+curl -O https://raw.githubusercontent.com/sr00t3d/directadmin-checkipv6/refs/heads/main/da-checkipv6.sh
 ```
 
-3. Execution  
-Run the script as root:
+2. **Give execution permission:**
 
 ```bash
-./check_ipv6.sh
+chmod +x da-checkipv6.sh
 ```
 
-4. Viewing the Result
+3. **Run the script:**
 
-After execution, you can view the report directly through the terminal or via browser (if Apache/Nginx is running):
+```bash
+./da-checkipv6.sh
+```
+
+4. Result View
+
+After execution, you can view the report directly through the terminal or via a browser (if Apache/Nginx is running):
 
 ```bash
 cat /var/www/html/ipv6-domains.txt
 ```
 
-📊 Output Example
+📊 Example Output
 
 ```bash
+
+./da-checkipv6.sh 
+Starting domain verification...
+List generated at /var/www/html/ipv6-domains.txt
+
 Domain                                   | AAAA                                    | Using IPv6?
 -----------------------------------------------------------------------------------------------
-example.com.br                           | 2001:db8:85a3::8a2e:370:7334            | yes       
-another-site.net                         | -                                       | no
+domain1.com.br                           | -                                       | no        
+domain2.adv.br                           | -                                       | no        
+domain3.org.br                           | -                                       | no        
+domain4.com                              | 1446:4700:130:436c:6f75:6466:6c61:7265  | yes     
 ```
 
 [!IMPORTANT]  
@@ -61,7 +66,7 @@ The script requires read permission in the DirectAdmin directories (/usr/local/d
 ## ⚠️ Legal Notice
 
 > [!WARNING]
-> This software is provided "as is". Always make sure to test first in a development environment. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
+> This software is provided "as is". Always ensure you have explicit permission before running. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
 
 ## 📚 Detailed Tutorial
 

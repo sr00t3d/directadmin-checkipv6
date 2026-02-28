@@ -1,6 +1,6 @@
 # DirectAdmin IPv6 Checker 🔍
 
-Readme: [English](README.md)
+Readme: [EN](README.md)
 
 ![License](https://img.shields.io/github/license/sr00t3d/directadmin-checkipv6)
 ![Shell Script](https://img.shields.io/badge/Shell-script-green)
@@ -8,6 +8,11 @@ Readme: [English](README.md)
 <img width="700" src="da-checkipv6-cover.webp" />
 
 Este script automatiza a verificação de registros **AAAA (IPv6)** para todos os domínios hospedados em um servidor DirectAdmin. Ele gera um relatório formatado indicando quais domínios já estão operando com a nova versão do protocolo IP.
+
+Certifique-se de ter o utilitário `dnsutils` (que contém o comando `dig`) instalado no seu servidor:
+
+- CentOS/CloudLinux: `yum install bind-utils`
+- Debian/Ubuntu: `apt-get install dnsutils`
 
 ## 📋 Funcionalidades
 
@@ -17,25 +22,23 @@ Este script automatiza a verificação de registros **AAAA (IPv6)** para todos o
 - Identifica rapidamente quais domínios possuem ou não apontamento IPv6.
 
 🚀 Como usar
-1. Pré-requisitos
-Certifique-se de ter o utilitário `dnsutils` (que contém o comando `dig`) instalado no seu servidor:
 
-CentOS/CloudLinux: `yum install bind-utils`
-
-Debian/Ubuntu: `apt-get install dnsutils`
-
-2. Instalação
-Salve o script no seu servidor e dê permissão de execução:
+1. **Baixe o arquivo no servidor:**
 
 ```bash
-chmod +x check_ipv6.sh
+curl -O https://raw.githubusercontent.com/sr00t3d/directadmin-checkipv6/refs/heads/main/da-checkipv6.sh
 ```
 
-3. Execução
-Execute o script como root:
+2. **Dê permissão de execução:**
 
 ```bash
-./check_ipv6.sh
+chmod +x da-checkipv6.sh
+```
+
+3. **Execute o script:**
+
+```bash
+./da-checkipv6.sh
 ```
 
 4. Visualização do Resultado
@@ -49,10 +52,17 @@ cat /var/www/html/ipv6-domains.txt
 📊 Exemplo de Saída
 
 ```bash
-Domínio                                  | AAAA                                    | Usando IPv6?
+
+./da-checkipv6.sh 
+Starting domain verification...
+List generated at /var/www/html/ipv6-domains.txt
+
+Domain                                   | AAAA                                    | Using IPv6?
 -----------------------------------------------------------------------------------------------
-exemplo.com.br                           | 2001:db8:85a3::8a2e:370:7334            | sim       
-outro-site.net                           | -                                       | não
+domain1.com.br                           | -                                       | no        
+domain2.adv.br                           | -                                       | no        
+domain3.org.br                           | -                                       | no        
+domain4.com                              | 1446:4700:130:436c:6f75:6466:6c61:7265  | yes     
 ```
 
 [!IMPORTANTE]  
@@ -60,10 +70,10 @@ O script requer permissão de leitura nos diretórios do DirectAdmin (/usr/local
 
 ## ⚠️ Aviso Legal
 
-> [!AVISO]
-> Este software é fornecido “como está”. Sempre certifique-se de testar primeiro em um ambiente de desenvolvimento. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados por esta ferramenta.
+> [!WARNING]
+> Este software é fornecido "tal como está". Certifique-se sempre de ter permissão explícita antes de executar. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados ​​por esta ferramenta.
 
-## 📚 Tutorial Detalhado
+## 📚 Detailed Tutorial
 
 Para um guia completo, passo a passo, confira meu artigo completo:
 

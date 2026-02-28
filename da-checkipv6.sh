@@ -1,17 +1,16 @@
-#!/bin/bash
-################################################################################
-#                                                                              #
-#   PROJECT: DirectAdmin IPv6 Auditor                                          #
-#   VERSION: 1.1.0                                                             #
-#                                                                              #
-#   AUTHOR:  Percio Andrade                                                    #
-#   CONTACT: percio@evolya.com.br | contato@perciocastelo.com.br               #
-#   WEB:     https://perciocastelo.com.br                                      #
-#                                                                              #
-#   INFO:                                                                      #
-#   Check which domains are using IPv6 (AAAA records) in DirectAdmin.          #
-#                                                                              #
-################################################################################
+#!/usr/bin/env bash
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                           ║
+# ║   DirectAdmin Check IPv6 v1.1.0                                           ║
+# ║                                                                           ║
+# ╠═══════════════════════════════════════════════════════════════════════════╣
+# ║   Autor:   Percio Castelo                                                 ║
+# ║   Contato: percio@evolya.com.br | contato@perciocastelo.com.br            ║
+# ║   Web:     https://perciocastelo.com.br                                   ║
+# ║                                                                           ║
+# ║   Função:  Check which domains are using IPv6 (AAAA records)              ║
+# ║            in DirectAdmin.                                                ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
 
 # Detect System Language (Get first 2 chars, e.g., 'pt' from 'pt_BR.UTF-8')
 SYSTEM_LANG="${LANG:0:2}"
