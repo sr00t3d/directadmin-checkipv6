@@ -60,8 +60,8 @@ domain3.org.br                           | -                                    
 domain4.com                              | 1446:4700:130:436c:6f75:6466:6c61:7265  | yes     
 ```
 
-[!IMPORTANT]  
-The script requires read permission in the DirectAdmin directories (/usr/local/directadmin/data/users/), therefore running it as the root user is recommended.
+> [!WARNING]
+> The script requires read permission in the DirectAdmin directories (/usr/local/directadmin/data/users/), therefore running it as the root user is recommended.
 
 ## ⚠️ Legal Notice
 
