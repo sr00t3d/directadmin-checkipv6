@@ -1,9 +1,8 @@
-# DirectAdmin IPv6 Checker 🔍
+# DirectAdmin IPv6 Checker
 
 Readme: [EN](README.md)
 
-![License](https://img.shields.io/github/license/sr00t3d/directadmin-checkipv6)
-![Shell Script](https://img.shields.io/badge/Shell-script-green)
+![License](https://img.shields.io/github/license/sr00t3d/directadmin-checkipv6) ![Shell Script](https://img.shields.io/badge/Shell-script-green)
 
 <img width="700" src="da-checkipv6-cover.webp" />
 
@@ -14,14 +13,14 @@ Certifique-se de ter o utilitário `dnsutils` (que contém o comando `dig`) inst
 - CentOS/CloudLinux: `yum install bind-utils`
 - Debian/Ubuntu: `apt-get install dnsutils`
 
-## 📋 Funcionalidades
+## Funcionalidades
 
 - Varre todos os usuários e domínios configurados no DirectAdmin.
 - Realiza consultas de DNS em tempo real (via `dig`).
 - Gera um relatório tabular limpo em `/var/www/html/ipv6-domains.txt`.
 - Identifica rapidamente quais domínios possuem ou não apontamento IPv6.
 
-🚀 Como usar
+## Como usar
 
 1. **Baixe o arquivo no servidor:**
 
@@ -41,7 +40,13 @@ chmod +x da-checkipv6.sh
 ./da-checkipv6.sh
 ```
 
-4. Visualização do Resultado
+### Modo direto
+
+```bash
+bash <(curl -fsSL 'https://raw.githubusercontent.com/sr00t3d/directadmin-checkipv6/refs/heads/main/da-checkipv6.sh')
+```
+
+## Visualização do Resultado
 
 Após a execução, você pode visualizar o relatório diretamente pelo terminal ou via navegador (se o Apache/Nginx estiver rodando):
 
@@ -49,10 +54,9 @@ Após a execução, você pode visualizar o relatório diretamente pelo terminal
 cat /var/www/html/ipv6-domains.txt
 ```
 
-📊 Exemplo de Saída
+## Exemplo de Saída
 
 ```bash
-
 ./da-checkipv6.sh 
 Starting domain verification...
 List generated at /var/www/html/ipv6-domains.txt
@@ -68,17 +72,17 @@ domain4.com                              | 1446:4700:130:436c:6f75:6466:6c61:726
 > [!WARNING]
 > O script requer permissão de leitura nos diretórios do DirectAdmin (/usr/local/directadmin/data/users/), portanto é recomendado executá-lo como usuário root.
 
-## ⚠️ Aviso Legal
+## Aviso Legal
 
 > [!WARNING]
 > Este software é fornecido "tal como está". Certifique-se sempre de ter permissão explícita antes de executar. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto nos dados causados ​​por esta ferramenta.
 
-## 📚 Detailed Tutorial
+## Detailed Tutorial
 
 Para um guia completo, passo a passo, confira meu artigo completo:
 
-👉 [**Verificar Domínios Ipv6 no DirectAdmin**](https://perciocastelo.com.br/blog/check-domains-ipv6-on-directAdmin.html)
+👉 [**Verificar Domínios Ipv6 no DirectAdmin**](https://perciocastelo.com.br/blog/check-domains-ipv6-on-directadmin.html)
 
-## Licença 📄
+## Licença
 
 Este projeto está licenciado sob a **GNU General Public License v3.0**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
